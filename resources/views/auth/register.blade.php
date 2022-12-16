@@ -36,31 +36,6 @@
                                 @enderror
                             </div>
 
-                            <div class="form-group">
-                                <label class="mb-1 text-white"><strong>Email</strong></label>
-                                <input id="email" type="email"
-                                    class="form-control @error('email') is-invalid @enderror" name="email"
-                                    value="{{ old('email') }}" required autocomplete="email">
-
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-
-                            <div class="form-group">
-                                <label class="mb-1 text-white"><strong>Phone</strong></label>
-                                <input id="phone" type="text"
-                                    class="form-control @error('phone') is-invalid @enderror" name="phone"
-                                    value="{{ old('phone') }}" required autocomplete="phone" autofocus>
-
-                                @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
 
                             <div class="form-group">
                                 <label class="mb-1 text-white"><strong>Password</strong></label>
@@ -81,18 +56,6 @@
                                     name="password_confirmation" required autocomplete="new-password">
                             </div>
 
-                            <div class="form-group">
-                                <label class="mb-1 text-white"><strong>Refferals</strong></label>
-                                <input id="reff" type="text"
-                                    class="form-control @error('reff') is-invalid @enderror" name="reff" required
-                                    autocomplete="reff" value="{{ request()->code ?? old('reff') }}" autofocus>
-
-                                @error('reff')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
 
                             <div class="text-center mt-4">
                                 <button type="submit" class="btn bg-white text-primary btn-block">Sign me
