@@ -60,7 +60,7 @@
                     <div class="collapse navbar-collapse justify-content-between">
                         <div class="header-left">
                             <div class="dashboard_bar text-primary">
-                                Welcome to ICO Alif
+                                Welcome to ...
                             </div>
                         </div>
                         <ul class="navbar-nav header-right">
@@ -126,28 +126,17 @@
                     </li>
 
                     @if (Auth::user()->hasRole('user'))
-                        {{-- <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                                <i class="fa-solid fa-wallet"></i>
-                                <span class="nav-text">Wallet</span>
-                            </a>
-                            <ul aria-expanded="false">
-                                <li><a href="{{ route('sendBnb') }}">Send BNB</a></li>
-                                <li><a href="{{ route('sendAlif') }}">Send Alif</a></li>
-                                <li><a href="{{ route('history-send') }}">History</a></li>
-                            </ul>
-                        </li> --}}
-
                         <li><a href="#" class="ai-icon" aria-expanded="false">
                                 <i class="flaticon-381-networking"></i>
                                 <span class="nav-text">Stacking</span>
                             </a>
                         </li>
-                        <li><a href="{{ route('network-main') }}" class="ai-icon" aria-expanded="false">
+                        <li><a href="" class="ai-icon" aria-expanded="false">
                                 <i class="fa-solid fa-network-wired"></i>
                                 <span class="nav-text">Network</span>
                             </a>
                         </li>
-                        <li><a href="{{ route('swab-main') }}" class="ai-icon" aria-expanded="false">
+                        <li><a href="" class="ai-icon" aria-expanded="false">
                                 <i class="fa-solid fa-money-bill-1"></i>
                                 <span class="nav-text">ICO</span>
                             </a>
@@ -158,8 +147,8 @@
                                 <span class="nav-text">History</span>
                             </a>
                             <ul aria-expanded="false">
-                                <li><a href="{{ route('swapHistory') }}">Purchase</a></li>
-                                <li><a href="{{ route('bonusHistory') }}">Bonus</a></li>
+                                <li><a href="">Purchase</a></li>
+                                <li><a href="">Bonus</a></li>
                                 {{-- <li><a href="#">Profit</a></li> --}}
                             </ul>
                         </li>
@@ -173,11 +162,11 @@
                                 <span class="nav-text">Withdraw</span>
                             </a>
                             <ul aria-expanded="false">
-                                <li><a href="{{ route('wdUsdt') }}">USDT</a></li>
-                                <li><a href="{{ route('wdAlif') }}">Alif</a></li>
+                                <li><a href="">USDT</a></li>
+                                <li><a href="">Alif</a></li>
                             </ul>
                         </li>
-                        <li><a href="{{ route('profile-users') }}" class="ai-icon" aria-expanded="false">
+                        <li><a href="" class="ai-icon" aria-expanded="false">
                                 <i class="fa-solid fa-gear"></i>
                                 <span class="nav-text">Profile</span>
                             </a>
@@ -190,59 +179,23 @@
                             </a>
                             <ul aria-expanded="false">
                                 <li><a href="{{ route('index-user') }}">User List</a></li>
-                                <li><a href="{{ route('user-balance') }}">Bonus List</a></li>
-                            </ul>
-                        </li>
-                        <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                                <i class="fa-solid fa-arrow-right-arrow-left"></i>
-                                <span class="nav-text">ICO Alif</span>
-                            </a>
-                            <ul aria-expanded="false">
-                                <li><a href="{{ route('index-swab') }}">Confirm ICO Alif</a></li>
-                                <li><a href="{{ route('all-swab') }}">History All</a></li>
                             </ul>
                         </li>
                         <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                                 <i class="fa-solid fa-clock-rotate-left"></i>
-                                <span class="nav-text">History</span>
+                                <span class="nav-text">Faskes</span>
                             </a>
                             <ul aria-expanded="false">
-                                <li><a href="{{ route('sendBnb-admin') }}">History Send BNB</a></li>
-                                <li><a href="{{ route('sendAlif-admin') }}">History Send Alif</a></li>
-                                <li><a href="{{ route('bonusHistory-admin') }}">History Bonus</a></li>
-                                <li><a href="{{ route('profitHistory-admin') }}">History Profit</a></li>
-                            </ul>
-                        </li>
-                        <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                                <i class="fa-solid fa-download"></i>
-                                <span class="nav-text">Withdraw</span>
-                            </a>
-                            <ul aria-expanded="false">
-                                <li><a href="{{ route('wdAlif-admin') }}">History withdraw Alif</a></li>
-                                <li><a href="{{ route('wdUsdt-admin') }}">History withdraw USDT</a></li>
-                            </ul>
-                        </li>
-
-                        <li><a href="#" class="ai-icon" aria-expanded="false">
-                                <i class="flaticon-381-networking"></i>
-                                <span class="nav-text">Withdraw Alif to BNB</span>
-                            </a>
-                        </li>
-                        <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                                <i class="fa-solid fa-gear"></i>
-                                <span class="nav-text">Settings</span>
-                            </a>
-                            <ul aria-expanded="false">
-                                <li><a href="{{ route('mainWallet-admin') }}">Main Wallet</a></li>
-                                <li><a href="{{ route('profile-users') }}">Profile</a></li>
+                                <li><a href="{{ route('index-kategory') }}">Kategori</a></li>
+                                <li><a href="">Fasilitas Kesehatan</a></li>
                             </ul>
                         </li>
                     @endif
 
                 </ul>
                 <div class="copyright">
-                    <p><strong>ICO ALIF</strong> © 2021 All Rights Reserved</p>
-                    <p>Made with <span class="heart"></span> by Dev~Team</p>
+                    <p><strong>...</strong> © 2021 All Rights Reserved</p>
+                    <p>Made with <span class="heart"></span></p>
                 </div>
             </div>
         </div>
