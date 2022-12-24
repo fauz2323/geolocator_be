@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Faskes;
+use App\Models\Kategori_faskes;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -23,6 +26,12 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        if (Auth::user()->hasRole('admin')) {
+            return view('home');
+        } else {
+            $kategori = Kategori_faskes::all();
+            $data = Faskes::where('kode_user', Auth::user()->id)->first();
+            return view('home.user', compact('data', 'kategori'));
+        }
     }
 }

@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\Admin\FaskesController;
 use App\Http\Controllers\Admin\KategoryFaskesController;
 use App\Http\Controllers\Admin\UserAdminController;
+use App\Http\Controllers\User\FaskesUserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('home');
 });
 
 Auth::routes();
@@ -34,11 +36,20 @@ Route::middleware('role:admin')->group(function () {
     //kategory
     Route::get('kategori-list', [KategoryFaskesController::class, 'index'])->name('index-kategory');
     Route::get('kategori-edit/{id}', [KategoryFaskesController::class, 'editView'])->name('view-edit-kategory');
-    Route::post('kategory-edit/{id}', [KategoryFaskesController::class, 'storeView'])->name('edit-kategory');
+    Route::post('kategory-save/{id}', [KategoryFaskesController::class, 'storeView'])->name('edit-kategory');
     Route::post('kategory-add', [KategoryFaskesController::class, 'store'])->name('add-kategory');
     Route::get('kategory-delete/{id}', [KategoryFaskesController::class, 'delete'])->name('delete-kategory');
+
+    //faskes
+    Route::get('faskes-list', [FaskesController::class, 'index'])->name('index-faskes');
+    Route::get('faskes-edit/{id}', [FaskesController::class, 'editView'])->name('view-edit-faskes');
+    Route::post('faskes-save/{id}', [FaskesController::class, 'storeView'])->name('edit-faskes');
+    Route::post('faskes-add', [FaskesController::class, 'store'])->name('add-faskes');
+    Route::get('faskes-delete/{id}', [FaskesController::class, 'delete'])->name('delete-faskes');
 });
 
 Route::middleware('role:user')->group(function () {
     //
+    Route::post('faskes-user-add', [FaskesUserController::class, 'store'])->name('add-user-faskes');
+    Route::post('faskes-user-edit', [FaskesUserController::class, 'edit'])->name('edit-user-faskes');
 });

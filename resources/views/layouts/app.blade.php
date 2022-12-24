@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Ico Alif</title>
+    <title>GELOCATOR</title>
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('images/favicon.png') }}">
     <link rel="stylesheet" href="{{ asset('vendor/chartist/css/chartist.min.css') }}">
@@ -127,46 +127,6 @@
 
                     @if (Auth::user()->hasRole('user'))
                         <li><a href="#" class="ai-icon" aria-expanded="false">
-                                <i class="flaticon-381-networking"></i>
-                                <span class="nav-text">Stacking</span>
-                            </a>
-                        </li>
-                        <li><a href="" class="ai-icon" aria-expanded="false">
-                                <i class="fa-solid fa-network-wired"></i>
-                                <span class="nav-text">Network</span>
-                            </a>
-                        </li>
-                        <li><a href="" class="ai-icon" aria-expanded="false">
-                                <i class="fa-solid fa-money-bill-1"></i>
-                                <span class="nav-text">ICO</span>
-                            </a>
-                        </li>
-
-                        <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                                <i class="fa-solid fa-clock-rotate-left"></i>
-                                <span class="nav-text">History</span>
-                            </a>
-                            <ul aria-expanded="false">
-                                <li><a href="">Purchase</a></li>
-                                <li><a href="">Bonus</a></li>
-                                {{-- <li><a href="#">Profit</a></li> --}}
-                            </ul>
-                        </li>
-                        <li><a href="#" class="ai-icon" aria-expanded="false">
-                                <i class="flaticon-381-networking"></i>
-                                <span class="nav-text">Withdraw Alif to BNB</span>
-                            </a>
-                        </li>
-                        <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
-                                <i class="fa-solid fa-download"></i>
-                                <span class="nav-text">Withdraw</span>
-                            </a>
-                            <ul aria-expanded="false">
-                                <li><a href="">USDT</a></li>
-                                <li><a href="">Alif</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="" class="ai-icon" aria-expanded="false">
                                 <i class="fa-solid fa-gear"></i>
                                 <span class="nav-text">Profile</span>
                             </a>
@@ -187,7 +147,7 @@
                             </a>
                             <ul aria-expanded="false">
                                 <li><a href="{{ route('index-kategory') }}">Kategori</a></li>
-                                <li><a href="">Fasilitas Kesehatan</a></li>
+                                <li><a href="{{ route('index-faskes') }}">Fasilitas Kesehatan</a></li>
                             </ul>
                         </li>
                     @endif

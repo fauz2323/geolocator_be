@@ -3,7 +3,11 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Faskes;
+use App\Models\Kategori_faskes;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Crypt;
+use Yajra\DataTables\DataTables;
 
 class FaskesController extends Controller
 {
@@ -14,16 +18,50 @@ class FaskesController extends Controller
 
     public function index(Request $request)
     {
-        # code...
+        $kategori = Kategori_faskes::all();
+        if ($request->ajax()) {
+            $faskes = Faskes::with('kategori', 'user')->get();
+            return DataTables::of($faskes)
+                ->addIndexColumn()
+                ->addColumn('action', function ($row) {
+                    $btn = '<a href="faskes-edit/' . Crypt::encrypt($row->id) . '" data-toggle="tooltip"  data-id="' . $row->id . '" data-original-title="Edit" class="edit btn btn-primary btn-sm editCustomer">Edit</a> | <a href="faskes-delete/' . Crypt::encrypt($row->id) . '" data-toggle="tooltip"  data-id="' . $row->id . '" data-original-title="Edit" class="edit btn btn-primary btn-sm editCustomer">Delete</a> ';
+                    return $btn;
+                })
+                ->addColumn('date', function ($row) {
+                    $date = $row->created_at->format('d-m-Y');
+                    return $date;
+                })
+                ->rawColumns(['action', 'date'])
+                ->make(true);
+        }
+        return view('admin.faskes.index', compact('kategori'));
     }
 
-    public function confirm($id)
+    public function editView($id)
     {
-        # code...
+        $data = Faskes::find(Crypt::decrypt($id));
+
+        return view('admin.faskes.edit', compact('data'));
     }
 
-    public function reject($id)
+    public function storeView($id, Request $request)
     {
-        # code...
+        $data = Faskes::find($id);
+        $data->update($request->all());
+        return redirect()->route('index-faskes')->with('success', 'success edit fasilitas kesehatan');
+    }
+
+    public function store(Request $request)
+    {
+        $data = Faskes::create($request->all());
+
+        return redirect()->route('index-faskes')->with('success', 'success add fasilitas kesehatan');
+    }
+
+    public function delete($id)
+    {
+        $data = Faskes::find(Crypt::decrypt($id));
+        $data->delete();
+        return redirect()->route('index-faskes')->with('success', 'success delete fasilitan kesehatan');
     }
 }
