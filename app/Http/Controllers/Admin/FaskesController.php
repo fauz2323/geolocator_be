@@ -77,7 +77,7 @@ class FaskesController extends Controller
 
     public function confirm($id)
     {
-        $faskes = Faskes::find($id);
+        $faskes = Faskes::find(Crypt::decrypt($id));
         $faskes->verifikasi = 'Terkonfirmasi';
         $faskes->save();
 
