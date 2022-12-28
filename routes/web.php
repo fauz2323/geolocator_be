@@ -46,6 +46,7 @@ Route::middleware('role:admin')->group(function () {
     Route::post('faskes-save/{id}', [FaskesController::class, 'storeView'])->name('edit-faskes');
     Route::post('faskes-add', [FaskesController::class, 'store'])->name('add-faskes');
     Route::get('faskes-delete/{id}', [FaskesController::class, 'delete'])->name('delete-faskes');
+    Route::get('faskes-confirm/{id}', [FaskesController::class, 'confirm'])->name('confirm-faskes');
 });
 
 Route::middleware('role:user')->group(function () {
