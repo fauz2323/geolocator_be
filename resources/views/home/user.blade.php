@@ -157,36 +157,38 @@
                             <select name="kode_kategori" class="form-control" id="exampleFormControlSelect1">
                                 <option disabled>Pilih Kategory</option>
                                 @foreach ($kategori as $item)
-                                    <option selected='{{ $item->id == $data->kode_kategori ? 'true' : 'false' }}'
-                                        value="{{ $item->id }}">{{ $item->nama_kategory }}</option>
+                                    <option value="{{ $item->id }}">{{ $item->nama_kategory }}</option>
                                 @endforeach
                             </select>
                         </div>
                         <div class="form-group">
                             <label for="exampleInputEmail1">Nama Faskes</label>
-                            <input type="text" class="form-control" value="{{ $data->nama_faskes }}"
+                            <input type="text" class="form-control" value="{{ $data->nama_faskes ?? '-' }}"
                                 name="nama_faskes">
                         </div>
                         <div class="form-group">
                             <label for="exampleInputEmail1">Kode Faskes</label>
-                            <input type="text" class="form-control" value="{{ $data->kode_faskes }}"
+                            <input type="text" class="form-control" value="{{ $data->kode_faskes ?? '-' }}"
                                 name="kode_faskes">
                         </div>
                         <div class="form-group">
                             <label for="exampleInputEmail1">Alamat</label>
-                            <textarea class="form-control" name="alamat" id="exampleFormControlTextarea1" rows="3">{{ $data->alamat }}</textarea>
+                            <textarea class="form-control" name="alamat" id="exampleFormControlTextarea1" rows="3">{{ $data->alamat ?? '-' }}</textarea>
                         </div>
                         <div class="form-group">
                             <label for="exampleInputEmail1">Telepon</label>
-                            <input type="text" class="form-control" value="{{ $data->telpon }}" name="telpon">
+                            <input type="text" class="form-control" value="{{ $data->telpon ?? '-' }}"
+                                name="telpon">
                         </div>
                         <div class="form-group">
                             <label for="exampleInputEmail1">Latitude</label>
-                            <input type="text" class="form-control" value="{{ $data->latitude }}" name="latitude">
+                            <input type="text" class="form-control" value="{{ $data->latitude ?? '-' }}"
+                                name="latitude">
                         </div>
                         <div class="form-group">
                             <label for="exampleInputEmail1">Longitude</label>
-                            <input type="text" class="form-control" value="{{ $data->longitude }}" name="longitude">
+                            <input type="text" class="form-control" value="{{ $data->longitude ?? '-' }}"
+                                name="longitude">
                         </div>
                         <div class="form-group">
                             <label for="exampleInputEmail1">Image</label>
