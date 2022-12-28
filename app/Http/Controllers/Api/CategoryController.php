@@ -11,7 +11,6 @@ class CategoryController extends Controller
     public function all()
     {
         $data = Kategori_faskes::all();
-
         return response()->json([
             'data' => $data
         ], 200);

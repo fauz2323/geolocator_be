@@ -5,8 +5,10 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Faskes;
 use App\Models\Kategori_faskes;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Crypt;
+use Ramsey\Uuid\Uuid;
 use Yajra\DataTables\DataTables;
 
 class FaskesController extends Controller
@@ -40,22 +42,46 @@ class FaskesController extends Controller
     public function editView($id)
     {
         $data = Faskes::find(Crypt::decrypt($id));
+        $kategori = Kategori_faskes::all();
 
-        return view('admin.faskes.edit', compact('data'));
+        return view('admin.faskes.edit', compact('data', 'kategori'));
     }
 
     public function storeView($id, Request $request)
     {
-        $data = Faskes::find($id);
-        $data->update($request->all());
-        return redirect()->route('index-faskes')->with('success', 'success edit fasilitas kesehatan');
+        $request->validate([
+            'kode_kategori' => 'required',
+            'nama_faskes' => 'required',
+            'alamat' => 'required',
+            'telpon' => 'required',
+            'latitude' => 'required',
+            'longitude' => 'required',
+            'kode_faskes' => 'required',
+        ]);
+
+        $data = $request->except('gambar', '_token');
+
+        if ($request->file('gambar')) {
+            $file = $request->file('gambar');
+            $fileName = Uuid::uuid4() . '.' . $file->getClientOriginalExtension();
+            $file->move(public_path('uploads'), $fileName);
+            $data['gambar'] = $fileName;
+        }
+
+        $faskes = Faskes::find($id);
+
+        $faskes->update($data);
+
+        return back()->with('success', 'success Edit data');
     }
 
-    public function store(Request $request)
+    public function confirm($id)
     {
-        $data = Faskes::create($request->all());
+        $faskes = Faskes::find($id);
+        $faskes->verifikasi = 'Terkonfirmasi';
+        $faskes->save();
 
-        return redirect()->route('index-faskes')->with('success', 'success add fasilitas kesehatan');
+        return redirect()->route('index-faskes')->with('success', 'success verifikasi fasilitas kesehatan');
     }
 
     public function delete($id)

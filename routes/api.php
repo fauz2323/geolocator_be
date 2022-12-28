@@ -23,3 +23,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::get('all-category', [CategoryController::class, 'all']);
 Route::get('all-faskes', [FaskesController::class, 'all']);
 Route::post('faskes-by-category', [FaskesController::class, 'byCategory']);
+Route::post('faskes-by-id', [FaskesController::class, 'faskesById']);

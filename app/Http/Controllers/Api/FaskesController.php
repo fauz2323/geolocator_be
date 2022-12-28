@@ -14,7 +14,7 @@ class FaskesController extends Controller
         $data = Faskes::all();
 
         return response()->json([
-            'data' => $data
+            'allFaskes' => $data
         ], 200);
     }
 
@@ -25,7 +25,16 @@ class FaskesController extends Controller
         $faskes = $data->faskes->get();
 
         return response()->json([
-            'data' => $faskes
+            'dataFaskes' => $faskes
+        ], 200);
+    }
+
+    public function faskesById(Request $request)
+    {
+        $data  = Faskes::find($request->faskes);
+
+        return response()->json([
+            'faskes' => $data
         ], 200);
     }
 }
