@@ -18,6 +18,14 @@ class FaskesController extends Controller
         ], 200);
     }
 
+    public function coordinate()
+    {
+        $coordinate = Faskes::select('longitude', 'latitude', 'nama_faskes')->get();
+        return response()->json([
+            'coordinate' => $coordinate
+        ], 200);
+    }
+
     public function byCategory(Request $request)
     {
         $data  = Kategori_faskes::find($request->kategory);
@@ -29,9 +37,9 @@ class FaskesController extends Controller
         ], 200);
     }
 
-    public function faskesById(Request $request)
+    public function faskesById($id)
     {
-        $data  = Faskes::find($request->faskes);
+        $data  = Faskes::find($id);
 
         return response()->json([
             'faskes' => $data
