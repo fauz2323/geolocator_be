@@ -59,7 +59,8 @@ class FaskesUserController extends Controller
         if ($request->file('gambar')) {
             $file = $request->file('gambar');
             $fileName = Uuid::uuid4() . '.' . $file->getClientOriginalExtension();
-            $file->move(public_path('uploads'), $fileName);
+            $request->file('gambar')->move('storage', $fileName);
+
             $data['gambar'] = $fileName;
         }
 
