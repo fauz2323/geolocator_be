@@ -31,7 +31,7 @@ class FaskesUserController extends Controller
         $data = $request->all();
         $file = $request->file('gambar');
         $fileName = Uuid::uuid4() . '.' . $file->getClientOriginalExtension();
-        $file->move(public_path('uploads'), $fileName);
+        $request->file('gambar')->move('storage', $fileName);
         $data['gambar'] = $fileName;
         $data['verifikasi'] = 'Dalam Pengecekan';
 

@@ -30,7 +30,7 @@ class FaskesController extends Controller
     {
         $data  = Kategori_faskes::find($request->kategory);
 
-        $faskes = $data->faskes->get();
+        $faskes = $data->faskes;
 
         return response()->json([
             'dataFaskes' => $faskes
