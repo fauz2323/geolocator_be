@@ -49,7 +49,7 @@ Route::middleware('role:admin')->group(function () {
     Route::get('faskes-confirm/{id}', [FaskesController::class, 'confirm'])->name('confirm-faskes');
 });
 
-Route::middleware('role:user')->group(function () {
+Route::middleware('role:user|admin')->group(function () {
     //
     Route::post('faskes-user-add', [FaskesUserController::class, 'store'])->name('add-user-faskes');
     Route::post('faskes-user-edit', [FaskesUserController::class, 'edit'])->name('edit-user-faskes');
