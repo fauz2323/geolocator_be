@@ -11,7 +11,7 @@ class FaskesController extends Controller
 {
     public function all()
     {
-        $data = Faskes::all();
+        $data = Faskes::where('verifikasi', '!=', 'Dalam Pengecekan')->get();
 
         return response()->json([
             'allFaskes' => $data
@@ -20,7 +20,7 @@ class FaskesController extends Controller
 
     public function coordinate()
     {
-        $coordinate = Faskes::select('longitude', 'latitude', 'nama_faskes')->get();
+        $coordinate = Faskes::select('longitude', 'latitude', 'nama_faskes')->where('verifikasi', '!=', 'Dalam Pengecekan')->get();
         return response()->json([
             'coordinate' => $coordinate
         ], 200);
@@ -30,7 +30,10 @@ class FaskesController extends Controller
     {
         $data  = Kategori_faskes::find($request->kategory);
 
-        $faskes = $data->faskes;
+        $faskes = Faskes::where([
+            ['verifikasi', '!=', 'Dalam Pengecekan'],
+            ['id_kategori_faskes', '=', $data->id]
+        ])->get();
 
         return response()->json([
             'dataFaskes' => $faskes
