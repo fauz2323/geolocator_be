@@ -32,7 +32,7 @@ class FaskesController extends Controller
 
         $faskes = Faskes::where([
             ['verifikasi', '!=', 'Dalam Pengecekan'],
-            ['id_kategori_faskes', '=', $data->id]
+            ['kode_kategori', '=', $data->id]
         ])->get();
 
         return response()->json([
