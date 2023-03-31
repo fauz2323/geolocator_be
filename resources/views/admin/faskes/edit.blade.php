@@ -8,7 +8,7 @@
                     <h4 class="card-title">Data Faskes</h4>
                 </div>
                 <div class="card-body">
-                    <form action="{{ route('edit-user-faskes') }}" method="post" enctype="multipart/form-data">
+                    <form action="{{ route('edit-faskes', $data->id) }}" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="form-group">
                             <label for="exampleFormControlSelect1">Kategory Fasilitas Kesehatan</label>
