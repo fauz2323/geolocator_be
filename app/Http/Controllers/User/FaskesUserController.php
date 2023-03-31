@@ -56,17 +56,27 @@ class FaskesUserController extends Controller
 
         $data = $request->except('gambar', '_token');
 
+
+
+        $user = User::find(Auth::user()->id);
+
+        $user->faskes->kode_kategori = $data['kode_kategori'];
+        $user->faskes->nama_faskes = $data['nama_faskes'];
+        $user->faskes->alamat = $data['alamat'];
+        $user->faskes->telpon = $data['telpon'];
+        $user->faskes->latitude = $data['latitude'];
+        $user->faskes->longitude = $data['longitude'];
+        $user->faskes->kode_faskes = $data['kode_faskes'];
+        $user->faskes->verifikasi = 'Dalam Pengecekan';
+
         if ($request->file('gambar')) {
             $file = $request->file('gambar');
             $fileName = Uuid::uuid4() . '.' . $file->getClientOriginalExtension();
             $request->file('gambar')->move('storage', $fileName);
-
-            $data['gambar'] = $fileName;
+            $user->faskes->gambar = $fileName;
         }
 
-        $user = User::find(Auth::user()->id);
-
-        $user->faskes()->update($data);
+        $user->faskes->save();
 
         return back()->with('success', 'success Edit data');
     }
