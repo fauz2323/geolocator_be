@@ -89,9 +89,9 @@
                     @csrf
                     <div class="modal-body">
                         <div class="form-group">
-                            <label for="exampleFormControlSelect1">Kategory Fasilitas Kesehatan</label>
+                            <label for="exampleFormControlSelect1">Kategori Fasilitas Kesehatan</label>
                             <select name="kode_kategori" class="form-control" id="exampleFormControlSelect1">
-                                <option disabled>Pilih Kategory</option>
+                                <option disabled>Pilih Kategori</option>
                                 @foreach ($kategori as $item)
                                     <option value="{{ $item->id }}">{{ $item->nama_kategory }}</option>
                                 @endforeach
@@ -122,16 +122,16 @@
                             <input type="text" class="form-control" name="longitude">
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Image</label>
+                            <label for="exampleInputEmail1">Gambar</label>
                             <div class="custom-file">
                                 <input type="file" class="custom-file-input" name="gambar" required>
-                                <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
+                                <label class="custom-file-label" for="validatedCustomFile">Pilih file...</label>
                             </div>
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary">Save changes</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                        <button type="submit" class="btn btn-primary">Simpan</button>
                     </div>
                 </form>
             </div>
@@ -153,9 +153,9 @@
                     @csrf
                     <div class="modal-body">
                         <div class="form-group">
-                            <label for="exampleFormControlSelect1">Kategory Fasilitas Kesehatan</label>
+                            <label for="exampleFormControlSelect1">Kategori Fasilitas Kesehatan</label>
                             <select name="kode_kategori" class="form-control" id="exampleFormControlSelect1">
-                                <option disabled>Pilih Kategory</option>
+                                <option disabled>Pilih Kategori</option>
                                 @foreach ($kategori as $item)
                                     <option value="{{ $item->id }}">{{ $item->nama_kategory }}</option>
                                 @endforeach
@@ -191,17 +191,17 @@
                                 name="longitude">
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Image</label>
+                            <label for="exampleInputEmail1">Gambar</label>
                             <div class="custom-file">
                                 <input type="file" class="custom-file-input" name="gambar">
-                                <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
+                                <label class="custom-file-label" for="validatedCustomFile">Pilih file...</label>
                             </div>
                             <p class="text-danger">*Jika tidak ada perubahan pada gambar mohon kosongi</p>
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary">Save changes</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                        <button type="submit" class="btn btn-primary">Simpan</button>
                     </div>
                 </form>
             </div>

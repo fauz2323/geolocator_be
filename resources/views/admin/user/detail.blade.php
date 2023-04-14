@@ -21,7 +21,7 @@
                             <td>{{ $user->email }}</td>
                         </tr>
                         <tr>
-                            <td>Join Date</td>
+                            <td>Tanggal Daftar</td>
                             <td>:</td>
                             <td>{{ $user->created_at }}</td>
                         </tr>
@@ -29,11 +29,11 @@
                     <div class="row d-flex justify-content-center">
                         <button type="button" class="btn btn-outline-primary btn-rounded mr-3" data-toggle="modal"
                             data-target="#password">
-                            Change Password
+                            Ubah Password
                         </button>
                         <button type="button" class="btn btn-outline-primary btn-rounded" data-toggle="modal"
                             data-target="#profile">
-                            Change Profile
+                            Ubah Detail User
                         </button>
                     </div>
 
@@ -48,7 +48,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Change Password</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Ubah Password</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -57,13 +57,13 @@
                     @csrf
                     <div class="modal-body">
                         <div class="form-group">
-                            <label for="exampleInputEmail1">New Password</label>
+                            <label for="exampleInputEmail1">Password Baru</label>
                             <input type="password" class="form-control" name="password">
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary">Save changes</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                        <button type="submit" class="btn btn-primary">Simpan</button>
                     </div>
                 </form>
             </div>
@@ -76,7 +76,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Change Profile</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Ubah Data User</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -85,7 +85,7 @@
                     @csrf
                     <div class="modal-body">
                         <div class="form-group">
-                            <label for="exampleInputEmail1">name</label>
+                            <label for="exampleInputEmail1">Nama</label>
                             <input type="text" class="form-control" value="{{ $user->name }}" name="name">
                         </div>
                         <div class="form-group">
@@ -94,8 +94,8 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary">Save changes</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                        <button type="submit" class="btn btn-primary">Simpan</button>
                     </div>
                 </form>
             </div>

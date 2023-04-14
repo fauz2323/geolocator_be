@@ -14,7 +14,7 @@
                             </div>
                         @endif
 
-                        {{ __('You are logged in!') }}
+                        {{ __('Selamat Datang di dashboar admin Sistem Informasi Fasilitas Kesehatan BPJS Kebayoran Lama') }}
                     </div>
                 </div>
             </div>

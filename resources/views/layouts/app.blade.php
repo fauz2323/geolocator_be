@@ -60,7 +60,7 @@
                     <div class="collapse navbar-collapse justify-content-between">
                         <div class="header-left">
                             <div class="dashboard_bar text-primary">
-                                Welcome to ...
+                                Hallo, {{ Auth::user()->name }} Selamat Datang...
                             </div>
                         </div>
                         <ul class="navbar-nav header-right">
@@ -135,10 +135,10 @@
                         {{-- admin --}}
                         <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                                 <i class="fa-solid fa-user"></i>
-                                <span class="nav-text">User</span>
+                                <span class="nav-text">Akun Faskes</span>
                             </a>
                             <ul aria-expanded="false">
-                                <li><a href="{{ route('index-user') }}">User List</a></li>
+                                <li><a href="{{ route('index-user') }}">List Akun Faskes</a></li>
                             </ul>
                         </li>
                         <li><a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
@@ -154,8 +154,8 @@
 
                 </ul>
                 <div class="copyright">
-                    <p><strong>...</strong> © 2021 All Rights Reserved</p>
-                    <p>Made with <span class="heart"></span></p>
+                    <p><strong>...</strong> © 2022 All Rights Reserved</p>
+                    <p>Dibuat Oleh <span class="heart"> Athiya Faradila</span></p>
                 </div>
             </div>
         </div>
@@ -188,7 +188,7 @@
         ***********************************-->
         <div class="footer">
             <div class="copyright">
-                <p>Copyright © Designed &amp; Developed by Dev~Team 2021</p>
+                <p>Copyright © Designed &amp; Developed by Dev~Team 2022</p>
             </div>
         </div>
         <!--**********************************

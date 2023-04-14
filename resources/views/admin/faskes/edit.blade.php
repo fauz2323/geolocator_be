@@ -11,9 +11,9 @@
                     <form action="{{ route('edit-faskes', $data->id) }}" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="form-group">
-                            <label for="exampleFormControlSelect1">Kategory Fasilitas Kesehatan</label>
+                            <label for="exampleFormControlSelect1">Kategori Fasilitas Kesehatan</label>
                             <select name="kode_kategori" class="form-control" id="exampleFormControlSelect1">
-                                <option disabled>Pilih Kategory</option>
+                                <option disabled>Pilih Kategori</option>
                                 @foreach ($kategori as $item)
                                     <option selected='{{ $item->id == $data->kode_kategori ? 'true' : 'false' }}'
                                         value="{{ $item->id }}">{{ $item->nama_kategory }}</option>
@@ -45,17 +45,17 @@
                             <input type="text" class="form-control" value="{{ $data->longitude }}" name="longitude">
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Image</label>
+                            <label for="exampleInputEmail1">Gambar</label>
                             <div class="custom-file">
                                 <input type="file" class="custom-file-input" name="gambar">
-                                <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
+                                <label class="custom-file-label" for="validatedCustomFile">Pilih file...</label>
                             </div>
                             <p class="text-danger">*Jika tidak ada perubahan pada gambar mohon kosongi</p>
                         </div>
                         <div class="form-group mt-3 mb-3">
                             <img src="{{ asset('uploads/' . $data->gambar) }}" class="img-fluid" alt="Responsive image">
                         </div>
-                        <button type="submit" class="btn btn-primary">Save changes</button>
+                        <button type="submit" class="btn btn-primary">Simpan</button>
                     </form>
                 </div>
             </div>

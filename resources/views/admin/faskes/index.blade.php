@@ -5,7 +5,7 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
-                    <h4 class="card-title">Fasilitas Kesehatan List</h4>
+                    <h4 class="card-title">Fasilitas Kesehatan</h4>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
@@ -22,7 +22,7 @@
                                     <th>Latitude</th>
                                     <th>Longitude</th>
                                     <th>Status</th>
-                                    <th>Action</th>
+                                    <th>Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>

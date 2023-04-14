@@ -5,7 +5,7 @@
         <div class="col-12">
             <div class="card">
                 <div class="card-header">
-                    <h4 class="card-title">Users List</h4>
+                    <h4 class="card-title">List Akun Faskes</h4>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
@@ -13,10 +13,10 @@
                             <thead>
                                 <tr>
                                     <th>No</th>
-                                    <th>Name</th>
+                                    <th>Nama</th>
                                     <th>Email</th>
-                                    <th>Date</th>
-                                    <th>Action</th>
+                                    <th>Tanggal</th>
+                                    <th>Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
