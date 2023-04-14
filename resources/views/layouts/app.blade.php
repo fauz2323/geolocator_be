@@ -66,7 +66,7 @@
                         <ul class="navbar-nav header-right">
                             <li class="nav-item dropdown header-profile">
                                 <a class="nav-link" href="javascript:void(0)" role="button" data-toggle="dropdown">
-                                    <img src="{{ asset('person.png') }}" width="20" alt="" />
+                                    <img src="{{ asset('icona.png') }}" width="20" alt="" />
 
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right">

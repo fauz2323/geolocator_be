@@ -6,10 +6,10 @@
                 <div class="col-xl-12">
                     <div class="auth-form">
                         <div class="text-center mb-3">
-                            <a href="index.html"><img src="{{ asset('ico.png') }}" height="100" width="100"
+                            <a href="index.html"><img src="{{ asset('logo.png') }}" height="100" width="100"
                                     alt=""></a>
                         </div>
-                        <h4 class="text-center mb-4 text-white">Sign in your account</h4>
+                        <h4 class="text-center mb-4 text-white">Mohon Login Terlebih Dahulu</h4>
                         <form method="POST" action="{{ route('login') }}">
                             @csrf
                             <div class="form-group">
@@ -51,8 +51,8 @@
                             </div>
                         </form>
                         <div class="new-account mt-3">
-                            <p class="text-white">Don't have an account? <a class="text-white"
-                                    href="{{ route('register') }}">Sign up</a></p>
+                            <p class="text-white">Tidak Punya Akses Akun? <a class="text-white"
+                                    href="{{ route('register') }}">Daftar</a></p>
                         </div>
                     </div>
                 </div>

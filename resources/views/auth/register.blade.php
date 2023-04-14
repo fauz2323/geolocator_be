@@ -24,7 +24,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label class="mb-1 text-white"><strong>Name</strong></label>
+                                <label class="mb-1 text-white"><strong>Nama</strong></label>
                                 <input id="name" type="text"
                                     class="form-control @error('name') is-invalid @enderror" name="name"
                                     value="{{ old('name') }}" required autocomplete="name" autofocus>
@@ -51,22 +51,20 @@
                             </div>
 
                             <div class="form-group">
-                                <label class="mb-1 text-white"><strong>Confirm Password</strong></label>
+                                <label class="mb-1 text-white"><strong>Konfirmasi Password</strong></label>
                                 <input id="password-confirm" type="password" class="form-control"
                                     name="password_confirmation" required autocomplete="new-password">
                             </div>
 
 
                             <div class="text-center mt-4">
-                                <button type="submit" class="btn bg-white text-primary btn-block">Sign me
-                                    up</button>
+                                <button type="submit" class="btn bg-white text-primary btn-block">Daftar</button>
                             </div>
 
                         </form>
                         <div class="new-account mt-3">
-                            <p class="text-white">Already have an account? <a class="text-white"
-                                    href="{{ route('login') }}">Sign
-                                    in</a></p>
+                            <p class="text-white">Sudah Punya Akun? <a class="text-white"
+                                    href="{{ route('login') }}">Login</a></p>
                         </div>
 
                     </div>
