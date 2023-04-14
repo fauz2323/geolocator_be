@@ -155,7 +155,7 @@
                 </ul>
                 <div class="copyright">
                     <p><strong>...</strong> © 2022 All Rights Reserved</p>
-                    <p>Dibuat Oleh <span class="heart"> Athiya Faradila</span></p>
+                    <p>Dibuat Oleh <span class="heart"> Athiya</span></p>
                 </div>
             </div>
         </div>
