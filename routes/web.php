@@ -53,4 +53,9 @@ Route::middleware('role:user|admin')->group(function () {
     //
     Route::post('faskes-user-add', [FaskesUserController::class, 'store'])->name('add-user-faskes');
     Route::post('faskes-user-edit', [FaskesUserController::class, 'edit'])->name('edit-user-faskes');
+
+    //profile
+    Route::get('profile', [App\Http\Controllers\User\ProfileController::class, 'index'])->name('profile');
+    Route::post('change-profile', [App\Http\Controllers\User\ProfileController::class, 'changeProfil'])->name('profile-change');
+    Route::post('change-password/', [App\Http\Controllers\User\ProfileController::class, 'changePass'])->name('password-change');
 });

@@ -126,7 +126,7 @@
                     </li>
 
                     @if (Auth::user()->hasRole('user'))
-                        <li><a href="#" class="ai-icon" aria-expanded="false">
+                        <li><a href="{{ route('profile') }}" class="ai-icon" aria-expanded="false">
                                 <i class="fa-solid fa-gear"></i>
                                 <span class="nav-text">Profile</span>
                             </a>
