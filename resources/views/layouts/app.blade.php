@@ -71,7 +71,7 @@
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right">
                                     @if (Auth::user()->hasRole('user'))
-                                        <a href="" class="dropdown-item ai-icon">
+                                        <a href="{{ route('profile') }}" class="dropdown-item ai-icon">
                                             <svg id="icon-user1" xmlns="http://www.w3.org/2000/svg" class="text-primary"
                                                 width="18" height="18" viewBox="0 0 24 24" fill="none"
                                                 stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -149,6 +149,11 @@
                                 <li><a href="{{ route('index-kategory') }}">Kategori</a></li>
                                 <li><a href="{{ route('index-faskes') }}">Fasilitas Kesehatan</a></li>
                             </ul>
+                        </li>
+                        <li><a href="{{ route('profile') }}" class="ai-icon" aria-expanded="false">
+                                <i class="fa-solid fa-gear"></i>
+                                <span class="nav-text">Profile</span>
+                            </a>
                         </li>
                     @endif
 
