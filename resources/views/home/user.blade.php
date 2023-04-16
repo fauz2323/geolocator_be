@@ -51,7 +51,7 @@
                             </tr>
                         </table>
                         @if ($data)
-                            <img src="{{ asset('uploads/' . $data->gambar) }}" class="img-fluid" alt="Responsive image">
+                            <img src="{{ asset('storage/' . $data->gambar) }}" class="img-fluid" alt="Responsive image">
                         @endif
                         @if (!$data)
                             <div>
