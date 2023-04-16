@@ -155,7 +155,6 @@
                 </ul>
                 <div class="copyright">
                     <p><strong>...</strong> © 2022 All Rights Reserved</p>
-                    <p>Dibuat Oleh <span class="heart"> Athiya</span></p>
                 </div>
             </div>
         </div>
@@ -188,7 +187,7 @@
         ***********************************-->
         <div class="footer">
             <div class="copyright">
-                <p>Copyright © Designed &amp; Developed by Dev~Team 2022</p>
+                <p>Dibuat Oleh Athiya Faradila</p>
             </div>
         </div>
         <!--**********************************
