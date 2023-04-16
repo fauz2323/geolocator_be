@@ -50,6 +50,9 @@
                                 <td>{{ $data->verifikasi ?? '-' }}</td>
                             </tr>
                         </table>
+                        @if ($errors->any())
+                            {!! implode('', $errors->all('<div>:message</div>')) !!}
+                        @endif
                         @if ($data)
                             <img src="{{ asset('storage/' . $data->gambar) }}" class="img-fluid" alt="Responsive image">
                         @endif
