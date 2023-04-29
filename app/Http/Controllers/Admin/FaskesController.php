@@ -57,8 +57,8 @@ class FaskesController extends Controller
             'nama_faskes' => 'required',
             'alamat' => 'required',
             'telpon' => 'required',
-            'latitude' => 'required',
-            'longitude' => 'required',
+            'latitude' => 'required|numeric|between:-90,90',
+            'longitude' => 'required|numeric|between:-180,180',
             'kode_faskes' => 'required',
         ]);
 
