@@ -60,6 +60,8 @@ class FaskesController extends Controller
             'latitude' => 'required|numeric|between:-90,90',
             'longitude' => 'required|numeric|between:-180,180',
             'kode_faskes' => 'required',
+            'ambulance' => 'required',
+            'info' => 'required',
         ]);
 
         $data = $request->except('gambar', '_token');

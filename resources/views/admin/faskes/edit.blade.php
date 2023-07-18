@@ -45,6 +45,18 @@
                             <input type="text" class="form-control" value="{{ $data->longitude }}" name="longitude">
                         </div>
                         <div class="form-group">
+                            <label for="exampleFormControlSelect1">Fasilitas Ambulance</label>
+                            <select name="ambulance" class="form-control" id="exampleFormControlSelect1">
+                                <option disabled>Pilih</option>
+                                <option value="yes">yes</option>
+                                <option value="no">no</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Detail Faskes</label>
+                            <textarea class="form-control" name="info" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        </div>
+                        <div class="form-group">
                             <label for="exampleInputEmail1">Gambar</label>
                             <div class="custom-file">
                                 <input type="file" class="custom-file-input" name="gambar">

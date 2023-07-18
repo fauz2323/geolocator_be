@@ -26,6 +26,8 @@ class FaskesUserController extends Controller
             'longitude' => 'required',
             'gambar' => 'required',
             'kode_faskes' => 'required',
+            'ambulance' => 'required',
+            'info' => 'required',
         ]);
 
         $data = $request->all();
